@@ -1,4 +1,4 @@
-# Aplicaciones Distribuidas (AREP Taller 1)
+# AREP TALLER 2
 
 Juan Pablo Poveda Cañón
 
