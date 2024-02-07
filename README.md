@@ -8,7 +8,7 @@ El uso de la arquitectura cliente-servidor implica que la aplicación está estr
 
 #### Como cliente:
 * Los clientes pueden acceder a diferentes rutas en el servidor web mediante URLs, como "/index.html" o "/script.js".
-* También pueden solicitar recursos específicos, como imágenes ("/imagenJulia.jpg") o enviar solicitudes personalizadas ("/title?name=...") para obtener información adicional.
+* También pueden solicitar recursos específicos o enviar solicitudes personalizadas ("/title?name=...") para obtener información adicional.
 
 #### Como servidor:
 * La clase HttpServer escucha en un puerto específico (en este caso, el puerto 35000) y está configurada para aceptar conexiones entrantes de los clientes.
