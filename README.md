@@ -2,21 +2,15 @@
 
 Juan Pablo Poveda Cañón
 
-Este proyecto es a una aplicación de red que cuenta con un gestor de solicitudes HTTP y un almacenamiento en caché para guardar respuestas previas.
+## Arquitectura
 
-### Funcionalidad
-* Desde cualquier browser, digitamos la direccion http://localhost:35000, y nos llevará a nuestro buscardor de peliculas, donde podremos encontrar a información de la pelicula.
-* El servidor comienza escuchando en el puerto 35000 para las conexiones entrantes de los clientes.
-  
-[![Sin-t-tulo.png](https://i.postimg.cc/LszN498c/Sin-t-tulo.png)](https://postimg.cc/rdwSQLWj)
+El uso de la arquitectura cliente-servidor implica que la aplicación está estructurada de manera que hay dos componentes principales: el cliente y el servidor. 
 
-##  Patrones de Diseño
+#### Como cliente:
+* Los clientes pueden acceder a diferentes rutas en el servidor web mediante URLs, como "/index.html" o "/script.js".
+* También pueden solicitar recursos específicos, como imágenes ("/imagenJulia.jpg") o enviar solicitudes personalizadas ("/title?name=...") para obtener información adicional.
 
-* Modelo Cliente-Servidor: Esta arquitectura establece la separación de responsabilidades entre el cliente y el servidor. El cliente envía solicitudes al servidor, y este último las procesa y devuelve las respuestas correspondientes.
-
-* Patrón Singleton: Este patrón se implementa en la clase Cache para asegurar que solo haya una instancia de la caché en toda la aplicación. Esto simplifica el almacenamiento de datos y permite que diferentes partes del código accedan a la misma instancia de caché.
-
-## Buenas Prácticas
-* Pruebas Unitarias: Garantizan que el código funcione correctamente y ayuda a detectar errores.
-  
-[![Sin-t-tulo2.png](https://i.postimg.cc/9fHZXs0K/Sin-t-tulo2.png)](https://postimg.cc/pmkpqGDJ)
+#### Como servidor:
+* La clase HttpServer escucha en un puerto específico (en este caso, el puerto 35000) y está configurada para aceptar conexiones entrantes de los clientes.
+* Cuando una conexión entrante es aceptada, el servidor crea flujos de entrada y salida para establecer la comunicación con el cliente.
+* La función principal del servidor es gestionar las solicitudes, procesarlas y enviar las respuestas correspondientes al cliente, cumpliendo así con el modelo cliente-servidor.
