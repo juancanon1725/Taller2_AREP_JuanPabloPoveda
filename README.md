@@ -11,6 +11,6 @@ La arquitectura cliente-servidor implica que la aplicación está estructurada d
 
 #### El servidor puede:
 
-*La clase HttpServer escucha en un puerto específico (en este caso, el puerto 35000) y está configurada para aceptar conexiones entrantes de los clientes.
-*Cuando una conexión entrante es aceptada, el servidor crea flujos de entrada y salida para establecer la comunicación con el cliente.
-*La función principal del servidor es gestionar las solicitudes, procesarlas y enviar las respuestas correspondientes al cliente, cumpliendo así con el modelo cliente-servidor.
+* La clase HttpServer escucha en un puerto específico (en este caso, el puerto 35000) y está configurada para aceptar conexiones entrantes de los clientes.
+* Cuando una conexión entrante es aceptada, el servidor crea flujos de entrada y salida para establecer la comunicación con el cliente.
+* La función principal del servidor es gestionar las solicitudes, procesarlas y enviar las respuestas correspondientes al cliente, cumpliendo así con el modelo cliente-servidor.
